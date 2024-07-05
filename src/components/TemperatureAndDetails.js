@@ -88,3 +88,4 @@ const TemperatureAndDetails = ({
 }
 
 export default TemperatureAndDetails;
+

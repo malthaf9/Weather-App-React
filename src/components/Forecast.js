@@ -10,11 +10,11 @@ const Forecast = ({ title, items }) => {
       </div>
       <hr className="my-2" />
 
-      <div className="flex flex-row items-center justify-between text-white">
+      <div className="flex flex-row items-center justify-between text-white overflow-x-auto">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center min-w-[80px]"
           >
             <p className="font-light text-sm">{item.title}</p>
             <img
@@ -31,4 +31,5 @@ const Forecast = ({ title, items }) => {
 }
 
 export default Forecast;
+
 
