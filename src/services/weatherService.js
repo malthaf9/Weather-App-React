@@ -8,11 +8,18 @@ const getWeatherData = (infoType, searchParams) => {
   url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
 
   return fetch(url)
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Failed to fetch weather data');
+      }
+      return res.json();
+    })
     .catch((err) => {
       console.error("Error fetching data: ", err);
+      throw err; // Rethrow the error to propagate it up the call stack
     });
 };
+
 
 const formatCurrentWeather = (data) => {
   const {
