@@ -2,7 +2,7 @@ import React from "react";
 import { iconUrlFromCode } from '../services/weatherService';
 
 const Forecast = ({ title, items }) => {
-  console.log(`${title} items:`, items); // Debugging log to check received items
+  console.log(`${title} items:`, items);
   return (
     <div>
       <div className="flex items-center justify-start mt-6">
