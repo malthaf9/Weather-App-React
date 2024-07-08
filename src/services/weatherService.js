@@ -16,7 +16,7 @@ const getWeatherData = (infoType, searchParams) => {
     })
     .catch((err) => {
       console.error("Error fetching data: ", err);
-      throw err; // Rethrow the error to propagate it up the call stack
+      throw err; 
     });
 };
 
@@ -90,8 +90,8 @@ const formatForecastWeather = (data) => {
   daily = Object.values(dailyData).slice(0, 5);
   hourly = hourly.slice(0, 5);
 
-  console.log("Formatted Daily Data:", daily); // Debug log
-  console.log("Formatted Hourly Data:", hourly); // Debug log
+  console.log("Formatted Daily Data:", daily); 
+  console.log("Formatted Hourly Data:", hourly); 
 
   return { timezone, daily, hourly };
 };
@@ -110,7 +110,7 @@ const getFormattedWeatherData = async (searchParams) => {
     units: searchParams.units,
   });
 
-  console.log("Raw Forecast Weather Data:", rawForecastWeather); // Debug log
+  console.log("Raw Forecast Weather Data:", rawForecastWeather); 
 
   const formattedForecastWeather = formatForecastWeather(rawForecastWeather);
 
