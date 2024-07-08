@@ -25,7 +25,7 @@ function App() {
           `Successfully fetched weather for ${data.name}, ${data.country}.`
         );
 
-        console.log("Fetched weather data:", data); // Debug log
+        console.log("Fetched weather data:", data); 
         setWeather(data);
       });
     };
